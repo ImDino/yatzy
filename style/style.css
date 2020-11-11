@@ -1,0 +1,258 @@
+/*******************
+***** settings *****
+*******************/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(26, 26, 26);
+    margin: 0px;
+    padding: 0p;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+    color: rgb(26, 26, 26);
+}
+.tableInput{
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+input[type=number]:focus {
+  outline: 0;
+  background: rgba(79, 188, 228, 0.295);
+}
+
+input[type="number"]:disabled {
+    position: relative; 
+    background-color: #f3c9c9;
+}
+
+input[type="number"]:disabled:after {
+    position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  background: #c00;
+  content: "";
+  width: 100%;
+  display: block;
+}
+
+/*******************
+* newGameContainer *
+*******************/
+#newGameContainer {
+    width: 100vw;
+    height: 100vh;
+    background: red;
+    text-align: center;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#newGameContainer .container {
+    width: 350px;
+    margin: 0px auto;
+    padding-top: 40px;
+}
+#newGameContainer .container input {
+    display: block;
+    border-radius: 5px;
+    height: 20px;
+    border: 0;
+    outline: 0px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#newGameContainer .container .addMorePlayers {
+    padding: 10px;
+    width: 140px;
+    font-size: 10px;
+    margin: 0px auto;
+    margin-top: 20px;
+    background: #4DAEE4;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+#newGameContainer .container .startGame {
+    padding: 17px;
+    width: 250px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px auto;
+    margin-top: 20px;
+    background: #4DAEE4;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+#newGameContainer .selectLanguage {
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.524);
+}
+#newGameContainer .selectLanguage select {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/*******************
+**** yatzyTable ****
+*******************/
+#yatzyTable {
+    border-collapse: collapse;
+    border: 2px solid rgb(87, 87, 87);
+}
+#yatzyTable #player td:first-child, 
+#yatzyTable #sum td:first-child, 
+#yatzyTable #bonus td:first-child, 
+#yatzyTable #total td:first-child  {
+    background-color: rgb(197, 197, 197);
+}
+#yatzyTable #player td:first-child {
+    width: 100px;
+}
+#yatzyTable #player td, 
+#yatzyTable #sum td, 
+#yatzyTable #bonus td, 
+#yatzyTable #total td {
+    font-weight: bold;
+    background-color: lightgray;
+    border: 2px solid rgb(87, 87, 87);
+}
+#yatzyTable td{
+    border: 1px solid darkgray;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    width: 70px;
+    text-align: center;
+}
+td:nth-child(2n) {
+    background: rgb(233, 233, 233);
+}
+#yatzyTable tr td:first-child{
+    padding: 0px 5px;
+    font-size: 80%;
+    text-align: left;
+}
+
+/*******************
+******* end *******
+*******************/
+.endContainer {
+    display: none;
+    text-align: center;
+    margin-top: 110px;
+    font-size: 30px;
+}
+.endContainer .winner {
+    margin-top: 30px;
+    font-size: 54px;
+}
+.endContainer .second {
+    margin-top: 6px;
+    font-size: 39px;
+}
+.endContainer .rest {
+    margin-top: 15px;
+    font-size: 30px;
+}
+.endContainer .restart {
+    margin-top: 50px;
+}
+
+.endContainer .winner div {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.endContainer .winner div:first-child {
+    font-size: 40px;
+}
+.endContainer .winner div:nth-child(2) {
+    font-size: 30px;
+}
+
+/*******************
+******* dice *******
+*******************/
+
+
+
+.yatzyContainer {
+    display: flex;
+    display: none;
+}
+#suggestions {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#suggestions div.suggest {
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    background-color: #e9e9e9;
+    padding: 10px 0px;
+    padding-left: 10px;
+    padding-right: 70px;
+    position: relative;
+    max-width: 200px;
+    font-size: 14px;
+}
+#suggestions div.suggest span {
+    font-weight: bold;
+}
+#suggestions div.suggest div.selectScore {
+    right: 0;
+    top: 0;
+    padding: 13px;
+    position: absolute;
+    background-color: #c5c5c5;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.dice {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 15px;
+    display: grid;
+    
+    grid-template-columns: 30px 30px 30px 30px 30px;
+    height: 60px;
+    grid-gap: 10px;
+    background-color: green;
+}
+.dice button {
+    width: 185px;
+    height: 30px;
+    margin-top: 15px;
+}
+#useDice {
+    margin-left: 63px;
+}
+
+.dice input{
+    min-width: 22px;
+}
+.dice img {
+    width: 100%;
+}

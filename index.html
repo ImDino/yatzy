@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy with students</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/yatzy.js"></script>
+</head>
+<body>
+    <div id="newGameContainer"> <!-- START: newGameContainer -->
+        <div class="container">
+            <img src="img/logo.svg">
+            <div class="playerInputs">
+                <input type="text" placeholder="Enter players name">
+            </div>
+            <div class="addMorePlayers" id="addPlayer">+ add more players</div>
+            <div class="startGame" id="start">START GAME!</div>
+            <div class="selectLanguage">
+                Select language
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="sv">Swedish</option>
+                    <option value="ja">日本人</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="endContainer"> <!-- START: endContainer -->
+        This Yatzy game has ended,<br>
+        and the winner is:
+        <div class="winner"></div>
+        <div class="restart"><a href="index.html">Restart game</a></div>
+
+    </div>
+    <div class="yatzyContainer"> <!-- START: yatzyContainer -->
+        <table id="yatzyTable">
+            <tr id="player">
+                <td>Player</td>
+            </tr>
+            <tr id="ones">
+                <td>Ones</td>
+            </tr>
+            <tr id="twos">
+                <td>Twos</td>
+            </tr>
+            <tr id="threes">
+                <td>Threes</td>
+            </tr>
+            <tr id="fours">
+                <td>Fours</td>
+            </tr>
+            <tr id="fives">
+                <td>Fives</td>
+            </tr>
+            <tr id="sixes">
+                <td>Sixes</td>
+            </tr>
+            <tr id="sum">
+                <td>Sum</td>
+            </tr>
+            <tr id="bonus">
+                <td>Bonus</td>
+            </tr>
+            <tr id="pair">
+                <td>Pair</td>
+            </tr>
+            <tr id="twoPairs">
+                <td>Two pairs</td>
+            </tr>
+            <tr id="threeKind">
+                <td>Three of a kind</td>
+            </tr>
+            <tr id="fourKind">
+                <td>Four of a kind</td>
+            </tr>
+            <tr id="sStraight">
+                <td>Small straight</td>
+            </tr>
+            <tr id="bStraight">
+                <td>Big straight</td>
+            </tr>
+            <tr id="fullHouse">
+                <td>Full house</td>
+            </tr>
+            <tr id="chance">
+                <td>Chance</td>
+            </tr>
+            <tr id="yatzy">
+                <td>Yatzy</td>
+            </tr>
+            <tr id="total">
+                <td>Total</td>
+            </tr>
+        </table>
+        <div class="dice"> <!-- START: diceContainer -->
+            <img src="img/dice/0.png" alt="" dice="1" dicevalue="0">
+            <img src="img/dice/0.png" alt="" dice="2" dicevalue="0">
+            <img src="img/dice/0.png" alt="" dice="3" dicevalue="0">
+            <img src="img/dice/0.png" alt="" dice="4" dicevalue="0">
+            <img src="img/dice/0.png" alt="" dice="5" dicevalue="0">
+            
+            <input type="checkbox" dice="1" disabled>
+            <input type="checkbox" dice="2" disabled>
+            <input type="checkbox" dice="3" disabled>
+            <input type="checkbox" dice="4" disabled>
+            <input type="checkbox" dice="5" disabled>
+            <button id="rollDice">Roll dices</button>
+        </div>
+        <div id="suggestions">
+            <!--Suggestions from JS will be generated here-->
+        </div>
+    </div>
+</body>
+</html>
